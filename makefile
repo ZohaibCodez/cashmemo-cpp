@@ -13,7 +13,7 @@ SOURCES = \
     $(SRC_DIR)/CellNumber.cpp \
     $(SRC_DIR)/Date.cpp \
     $(SRC_DIR)/Item.cpp \
-    $(SRC_DIR)/main.cpp \
+    $(SRC_DIR)/cashmemo_app.cpp \
     $(SRC_DIR)/Name.cpp \
     $(SRC_DIR)/ReceiptNo.cpp \
     $(SRC_DIR)/ShopDetails.cpp
@@ -25,7 +25,7 @@ OBJECTS = \
     $(OBJ_DIR)/CellNumber.o \
     $(OBJ_DIR)/Date.o \
     $(OBJ_DIR)/Item.o \
-    $(OBJ_DIR)/main.o \
+    $(OBJ_DIR)/cashmemo_app.o \
     $(OBJ_DIR)/Name.o \
     $(OBJ_DIR)/ReceiptNo.o \
     $(OBJ_DIR)/ShopDetails.o
@@ -59,7 +59,7 @@ $(OBJ_DIR)/Item.o: $(SRC_DIR)/Item.cpp
 	@mkdir -p $(OBJ_DIR)
 	$(CXX) $(CXXFLAGS) -c $< -o $@
 
-$(OBJ_DIR)/main.o: $(SRC_DIR)/main.cpp
+$(OBJ_DIR)/cashmemo_app.o: $(SRC_DIR)/cashmemo_app.cpp
 	@mkdir -p $(OBJ_DIR)
 	$(CXX) $(CXXFLAGS) -c $< -o $@
 
