@@ -1,4 +1,4 @@
-#include "CashMemo.cpp"
+#include "CashMemo.h"
 #include <iostream>
 using namespace std;
 int main()

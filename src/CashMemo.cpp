@@ -1,40 +1,4 @@
-#include "ShopDetails.cpp"
-#include "ReceiptNo.cpp"
-#include "Name.cpp"
-#include "Date.cpp"
-#include "Item.cpp"
-
-#include <array>
-using namespace std;
-
-class CashMemo
-{
-protected:
-    ShopDetails details;
-    ReceiptNo no;
-    Date date;
-    Name name;
-    array<Item, 2> items;
-
-public:
-    // Conatructors
-    CashMemo() {};
-    CashMemo(const ShopDetails &_details, const Date &_date, const Name &_name, const array<Item, 2> &_items) : details(_details), date(_date), name(_name), items(_items) {};
-    CashMemo(const CashMemo &other) : details(other.details), no(other.no), date(other.date), items(other.items) {};
-
-    friend istream &operator>>(istream &in, CashMemo &c);
-    friend ostream &operator<<(ostream &out, CashMemo &c);
-
-    float calculateTotal() const
-    {
-        float total = 0;
-        for (Item item : items)
-        {
-            total += item.getAmount();
-        }
-        return total;
-    }
-};
+#include "CashMemo.h"
 
 istream &operator>>(istream &in, CashMemo &c)
 {
@@ -92,11 +56,3 @@ ostream &operator<<(ostream &out, CashMemo &c)
 
     return out;
 }
-
-// int main()
-// {
-//     CashMemo c;
-//     cin >> c;
-//     cout << c << endl;
-//     return 0;
-// }

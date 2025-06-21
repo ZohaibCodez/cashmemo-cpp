@@ -1,6 +1,7 @@
+#pragma once
 #include <iostream>
-using namespace std;
 
+using namespace std;
 
 class ReceiptNo
 {
@@ -21,10 +22,4 @@ public:
         return this->receiptNumber;
     }
     friend ostream &operator<<(ostream &out, const ReceiptNo &r);
-};
-ostream &operator<<(ostream &out, const ReceiptNo &r)
-{
-    out << r.receiptNumber;
-    return out;
-}
-int ReceiptNo::lastReceiptNo = 1000;
+}; 
