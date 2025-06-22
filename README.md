@@ -74,6 +74,65 @@ make clean
 
 ---
 
+## 🖥️ Sample Usage
+
+Here is an example of the program's input and output flow:
+
+```
+$ make run
+                  SHOP DETAILS
+
+Enter Shop First Name : Super
+Enter Shop Last Name : Electronics
+Enter Shop Description : Quality Gadgets
+Shop's Owner Name
+Enter first name: Zohaib
+Enter middle name: (or '-' to skip)-
+Enter last name: Khan
+CellInfo 
+Enter Country Code : 92
+Enter Number : 3001234567
+Address Info
+Street No : 123
+City : Islamabad
+Country : Pakistan
+Enter date (DD MM YYYY): 22 6 2024
+                  CUSTOMER'S INFO
+Enter first name: Ali
+Enter middle name: (or '-' to skip)-
+Enter last name: Ahmed
+
+Enter 2 Items:
+Enter particular: Wireless Mouse
+Enter quantity: 1
+Enter rate: 1500
+Enter particular: Keyboard
+Enter quantity: 1
+Enter rate: 2500
+------------------------------------------------------
+              Super Electronics
+------------------------------------------------------
+         Quality Gadgets
+           Cell : +92 3001234567
+
+No: 1001                                  Date: 22-6-2024
+Name: Ali Ahmed
+
+------------------------------------------------------
+     Qty         Particulars      Rate      Amount
+------------------------------------------------------
+       1      Wireless Mouse   1500.00     1500.00
+       1          Keyboard   2500.00     2500.00
+------------------------------------------------------
+                                         Total: 4000.00
+------------------------------------------------------
+Signature: Zohaib Khan
+Address : Street # 123, Islamabad, Pakistan
+
+```
+
+---
+
 ## 🧩 Core Classes
 
 - **`CashMemo`**: The main class that aggregates all other components to form the final receipt.
